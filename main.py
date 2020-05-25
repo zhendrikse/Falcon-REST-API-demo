@@ -26,7 +26,7 @@ def ping():
     return  "Ping ok"
 
 @app.route('/api/fibonacci/<int:num>', methods=['GET'])
-def add(num):
+def fib(num):
     logging.info("Fibonacci invoked for n = %s", num)
     return jsonify({f"fibonacci({num})" : fibonacci(num)})
 
